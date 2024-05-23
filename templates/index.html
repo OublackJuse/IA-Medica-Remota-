@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health Assistant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body { text-align: center; }
+        #video-container {
+        width: 600px;
+        height: 450px;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">AI Health Assistant</h4>
+                    </div>
+                    <div class="card-body chat-content">
+                        <div class="media user-message mb-3">
+                            <div class="media-body message-bubble">
+                                <div id="video-container">
+                                    <img src="/video" />
+                                </div>
+                                <p class="mb-0">Hola soy un chat medico ¿En que te puedo colaborar?</p>
+                            </div>
+                        </div>
+                        <div class="media ai-message mb-3"></div>
+                    </div>
+                    <div class="card-footer chat-input">
+                        <input type="text" class="form-control" id="input" placeholder="Escriba su consulta médica...">
+                        <button class="btn btn-primary" id="buscar">Enviar</button>
+                        <button class="btn btn-primary" id="buscarPorVoz">Por Voz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
